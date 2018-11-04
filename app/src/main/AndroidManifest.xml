@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bitcrownd.wallet.bitcrownd">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".model.BalanceApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/app_logo"
+        android:theme="@style/AppTheme"
+        >
+
+        <activity android:name=".authentication.LoginActivity">
+        </activity>
+
+        <activity
+            android:name=".introduction.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppIntroSlider">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".wallet.WalletOverview"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".wallet.UserPreferences"
+            android:label="">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="bitcrownd.wallet.bitcrownd.wallet.WalletOverview" />
+        </activity>
+
+        <activity android:name=".transfer.SendEmailActivity" />
+        <activity android:name=".transfer.SendSMSActivity" />
+        <activity android:name=".transfer.bluetooth.MainActivity" />
+        <activity android:name=".transfer.nfc.MainActivity" />
+        <activity android:name=".transfer.nfc.ReceiveDataNFC" />
+
+        <intent-filter>
+            <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+
+            <data android:mimeType="application/bitcrownd.wallet.bitcrownd" />
+        </intent-filter>
+
+        <activity android:name=".authentication.ForgotPass"></activity>
+
+        <activity android:name=".exchange.MainActivity"></activity>
+
+    </application>
+
+</manifest>

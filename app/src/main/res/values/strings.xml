@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General interface -->
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Settings</string>
+    <string name="tab_send">Send</string>
+    <string name="tab_wallet">Wallet</string>
+    <string name="tab_transactions">Transactions</string>
+    <string name="fee">Fee</string>
+    <string name="send">Send</string>
+    <string name="receive">Receive</string>
+
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <!-- Balances tab -->
+    <string name="tab_wallet_your_address_label">Your address</string>
+    <string name="tab_wallet_receive_bitcoins">Receive Bitcoins</string>
+    <string name="tab_wallet_receive_assets">Receive Assets</string>
+    <string name="tab_wallet_qr_code_label">QR Code</string>
+    <string name="tab_wallet_loading_wallet_label">Loading wallet…</string>
+    <string name="tab_wallet_loading_wallet_error">Error opening wallet</string>
+    <string name="tab_wallet_units_count">%s Units</string>
+    <string name="tab_wallet_bitcoin_count">%s BTC</string>
+    <string name="tab_wallet_asset_id">Asset ID: %s</string>
+    <string name="tab_wallet_balance_label">Balance</string>
+    <string name="tab_wallet_assets_label">Assets</string>
+    <string name="tab_wallet_dialog_qr_close">Close</string>
+    <string name="tab_wallet_dialog_qr_copy_address">Copy address</string>
+    <string name="tab_wallet_dialog_qr_title_assets">Receive bitcoins or colored coins</string>
+    <string name="tab_wallet_dialog_qr_title_bitcoin">Receive bitcoins</string>
+
+    <string name="error_http">Erro Sending It</string>
+    <string name="error_io">Erro Sending It</string>
+    <!-- Send tab -->
+    <string name="tab_send_destination_address_label">Destination Address</string>
+    <string name="tab_send_amount_label">Amount</string>
+    <string name="tab_send_send_button">Send</string>
+    <string name="tab_send_error_invalid_amount">The amount is invalid.</string>
+    <string name="tab_send_error_insufficient_funds">You don\'t have enough bitcoins on your address.</string>
+    <string name="tab_send_error_insufficient_asset">You don\'t have enough assets on your address.</string>
+    <string name="tab_send_error_amount_too_low">The amount you entered is too low.</string>
+    <string name="tab_send_error_server_error">Please make sure the address is valid and the application is up to date.</string>
+    <string name="tab_send_error_connection_error">An error occurred. Please make sure you have an internet connection.</string>
+    <string name="tab_send_dialog_please_wait">Please wait</string>
+    <string name="tab_send_dialog_verifying_balance">Verifying balance…</string>
+    <string name="tab_send_dialog_confirm_transaction">Confirm transaction</string>
+    <string name="tab_send_dialog_confirm_button">Confirm</string>
+    <string name="tab_send_error_broadcast">The transaction could not be broadcasted.</string>
+    <string name="tab_send_dialog_broadcasting">Broadcasting transaction…</string>
+    <string name="tab_send_error_dialog_title">Error</string>
+    <string name="tab_send_dialog_transaction_success_title">Transaction successful</string>
+    <string name="tab_send_dialog_transaction_successful_message">The transaction has been successfully pushed to the network.</string>
+    <string name="tab_send_dialog_transaction_successful_see">See transaction</string>
+    <string name="tab_send_dialog_transaction_successful_close">Close</string>
+    <string name="tab_send_dialog_confirm_message">You are about to send %1$s %2$s to the following address:\n\n%3$s</string>
+    <string name="tab_send_dialog_confirm_message_amount_bitcoin">BTC</string>
+    <string name="tab_send_dialog_confirm_message_amount_known_asset">%1$s (%2$s)</string>
+    <string name="tab_send_dialog_confirm_message_amount_unknown_asset">units (Asset ID: %s)</string>
+    <string name="tab_send_dialog_confirm_password">Enter your wallet password to confirm</string>
+    <string name="tab_send_dialog_confirm_password_incorrect">The password is incorrect.</string>
+    <string name="tab_send_selector_short_bitcoin">BTC</string>
+    <string name="tab_send_selector_short_unknown_asset">Units</string>
+    <string name="tab_send_selector_long_bitcoin">Bitcoin</string>
+    <string name="tab_send_selector_long_unknown_asset">Asset ID: %s…</string>
+
+    <!-- Transactions tab -->
+    <string name="tab_transactions_loading_wallet_label">Loading transactions…</string>
+    <string name="tab_transactions_loading_wallet_error">Error opening wallet</string>
+    <string name="tab_transactions_unconfirmed">Unconfirmed</string>
+    <string name="tab_transactions_empty">There is no transaction yet in your wallet</string>
+
+    <!-- General -->
+    <string name="general_first_launch_title">Welcome</string>
+    <string name="general_first_launch_message">Welcome again to Bitcrownd:). We have generated a new key for your wallet, please write it down and store it in a safe place:\n\n%s</string>
+    <string name="general_first_launch_close">Close</string>
+
+    <!-- Settings -->
+    <string name="settings_wallet_seed_title">Wallet seed</string>
+    <string name="settings_wallet_seed_message">Your wallet seed encoded in mnemonic form is:\n\n%s</string>
+    <string name="settings_wallet_seed_error_password_on">Wallet backup is disabled while wallet password is enabled. Disable your wallet password before making a backup.</string>
+    <string name="settings_wallet_seed_close">Close</string>
+    <string name="settings_item_title_backup_seed">Backup wallet seed</string>
+    <string name="settings_item_summary_backup_seed">Backup the wallet using a mnemonic phrase</string>
+    <string name="settings_item_title_restore_seed">Restore wallet seed</string>
+    <string name="settings_item_summary_restore_seed">Restore a wallet from a mnemonic phrase</string>
+    <string name="settings_item_title_wallet_password">Password protection</string>
+    <string name="settings_item_summary_wallet_password_enabled">Enabled</string>
+    <string name="settings_item_summary_wallet_password_disabled">Disabled</string>
+    <string name="settings_item_title_version">Application version</string>
+    <string name="settings_section_wallet">Wallet settings</string>
+    <string name="settings_section_about">About</string>
+    <string name="settings_dialog_restore_seed_title">Restore wallet seed</string>
+    <string name="settings_dialog_restore_seed">You are about to restore a wallet. Attention: funds in your current wallet will be lost if you haven\'t backed them up.\n\nType your wallet mnemonic:</string>
+    <string name="settings_dialog_restore_seed_success_title">Seed restored</string>
+    <string name="settings_dialog_restore_seed_success_message">The seed has been successfully restored. Please restart the application to load the restored wallet.</string>
+    <string name="settings_dialog_restore_seed_error_title">Error</string>
+    <string name="settings_dialog_restore_seed_error_message">The seed was invalid and could not be restored.</string>
+    <string name="settings_dialog_enable_wallet_password_title">Enable wallet password</string>
+    <string name="settings_dialog_enable_wallet_password_text1">You are about to set a password for your wallet. You will be prompted for this password every time you try to send funds. Attention: it is not possible to recover your funds if you lose the password. Make sure you have a backup.</string>
+    <string name="settings_dialog_enable_wallet_password_text2">Enter password</string>
+    <string name="settings_dialog_enable_wallet_password_text3">Repeat password</string>
+    <string name="settings_dialog_enable_wallet_password_error">The two passwords don\'t match.</string>
+    <string name="settings_dialog_disable_wallet_password_title">Disable wallet password</string>
+    <string name="settings_dialog_disable_wallet_password_text1">You are about to disable password protection.</string>
+    <string name="settings_dialog_disable_wallet_password_text2">Enter password</string>
+    <string name="settings_dialog_disable_wallet_password_error">The password is incorrect.</string>
+
+    <string name="activity_not_locked_text">Nothing should happen on this page, here for test purpose</string>
+    <string name="activity_dialog_title">Forgot you Pincode?</string>
+    <string name="activity_dialog_accept">OK</string>
+    <string name="activity_dialog_decline">CANCEL</string>
+    <string name="activity_dialog_content">Tap \'OK\' to log out, when you log back in you\'ll be able to create a new Pincode.\n\nIf you remember your Pincode, tap \'Cancel\' to go back.</string>
+    <string name="activity_appcompat_message">I am a PinCompatActivity!</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Welcome :-)</string>
+    <string name="slide_1_desc">The easiest way storage your Bitcoins Safety</string>
+
+    <string name="slide_2_title">Hybrid Wallet</string>
+    <string name="slide_2_desc">You cant Send your BTC Adress witch just on click</string>
+
+    <string name="slide_3_title">Safety First!</string>
+    <string name="slide_3_desc">Our Prioridy is your money is good hands</string>
+
+    <string name="slide_4_title">Mobile Cold Storage</string>
+    <string name="slide_4_desc">After you Create you First Account you can move your Money to a Cold Storage</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_converter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/input_register_bg"
+    tools:context="bitcrownd.wallet.bitcrownd.exchange.MainActivity">
+
+    <TextView
+        android:text="Current EUR to BTC:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_eurusd"
+        android:textColor="@color/primary_light"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="XXXX"
+        android:id="@+id/label_text_USDEUR"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/primary_light"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@+id/label_usdeur"
+        android:layout_alignBottom="@+id/label_usdeur"
+        android:layout_toEndOf="@+id/label_usdeur"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:text="Current BTC to EUR:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_usdeur"
+        android:textColor="@color/primary_light"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/label_eurusd"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:text="XXXX"
+        android:id="@+id/label_text_EURUSD"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/primary_light"
+        android:textStyle="normal|bold"
+        android:layout_width="wrap_content"
+        android:layout_alignBaseline="@+id/label_eurusd"
+        android:layout_alignBottom="@+id/label_eurusd"
+        android:layout_alignStart="@+id/label_text_USDEUR" />
+
+    <TextView
+        android:text="Select the conversion and insert the amount!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/label_text_presen"
+        android:textColor="@color/primary_light"
+        android:layout_below="@+id/label_text_USDEUR"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_convert"
+        android:onClick="currency_convert_event"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        android:id="@+id/field_currency_imput"
+        android:layout_below="@+id/radioGroup"
+        android:textColor="@color/primary_light"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:layout_toStartOf="@+id/label_text_EURUSD"
+        android:layout_alignEnd="@+id/label_text_USDEUR"
+        android:hint="Insert the amount" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/field_comission_imput"
+        android:layout_alignBaseline="@+id/field_currency_imput"
+        android:layout_alignBottom="@+id/field_currency_imput"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:hint="%" />
+
+    <TextView
+        android:text="Fee:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_comission"
+        android:layout_above="@+id/field_comission_imput"
+        android:layout_alignStart="@+id/field_comission_imput" />
+
+    <TextView
+        android:text="Amount:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_amount"
+        android:layout_alignBaseline="@+id/label_comission"
+        android:layout_alignBottom="@+id/label_comission"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0 €"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@color/primary_light"
+        android:layout_marginTop="38dp"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_below="@+id/field_currency_imput"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="You get:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_output"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/primary_light"
+        android:layout_below="@+id/field_currency_imput"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:checkedButton="@+id/rButton_EURUSD"
+        android:layout_below="@+id/label_text_presen"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rButton_EURUSD"
+            android:layout_below="@+id/label_text_presen"
+            android:textColor="@color/primary_light"
+            android:layout_alignParentStart="true"
+            android:layout_marginRight="15dp"
+            android:text="EUR to BTC" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rButton_USDEUR"
+            android:textColor="@color/primary_light"
+            android:layout_alignBaseline="@+id/rButton_USDEUR"
+            android:layout_alignBottom="@+id/rButton_USDEUR"
+            android:layout_toEndOf="@+id/label_usdeur"
+            android:text="BTC to EUR" />
+    </RadioGroup>
+
+
+</RelativeLayout>

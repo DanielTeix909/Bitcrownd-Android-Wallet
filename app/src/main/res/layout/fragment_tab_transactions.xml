@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    android:background="@color/primary_dark">
+
+  <ListView
+    android:id="@+id/transactionList"
+    android:overScrollMode="never"
+    android:layout_width="match_parent"
+      android:textColor="@color/text_muted"
+    android:layout_height="match_parent"/>
+
+  <LinearLayout
+    android:id="@android:id/empty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingRight="16dp"
+      android:text="@string/tab_transactions_empty"
+      android:textColor="@color/text_muted"
+      android:gravity="center"
+      android:textAppearance="?android:attr/textAppearanceMedium"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/loadingIndicator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <ProgressBar
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminateOnly="true"
+      android:keepScreenOn="true"
+      android:paddingRight="16dp" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingRight="16dp"
+      android:text="@string/tab_transactions_loading_wallet_label"
+      android:textAppearance="?android:attr/textAppearanceMedium"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/errorMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:visibility="gone">
+
+    <ImageView
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:indeterminateOnly="true"
+      android:keepScreenOn="true"
+      android:paddingRight="16dp"
+      android:src="@drawable/ic_dialog_alert_holo_light" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingRight="16dp"
+      android:text="@string/tab_transactions_loading_wallet_error"
+      android:textAppearance="?android:attr/textAppearanceMedium"/>
+  </LinearLayout>
+
+</RelativeLayout>

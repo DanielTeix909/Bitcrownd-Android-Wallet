@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/primary_dark"
+	tools:context="bitcrownd.wallet.bitcrownd.transfer.bluetooth.MainActivity">
+
+
+	<TextView
+		android:id="@+id/textView16"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+
+		android:text="Check your Bitcoin Adress"
+		android:textColor="@color/primary_light"
+		android:textSize="18sp"
+		android:layout_below="@+id/btn_connect"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="25dp" />
+
+	<EditText
+		android:id="@+id/input_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="13"
+		android:hint="Bitcoin Adress"
+		android:inputType="textMultiLine"
+		android:textColor="@color/primary_light"
+		android:layout_below="@+id/textView16"
+		android:layout_centerHorizontal="true" />
+
+	<Button
+		android:id="@+id/btn_send"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Send Bitcoins"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentEnd="true" />
+
+	<TextView
+		android:id="@+id/status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Device Status"
+		android:textSize="18sp"
+
+		android:textColor="@color/primary_light"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="22dp" />
+
+	<Button
+		android:id="@+id/btn_connect"
+		android:layout_width="170dp"
+		android:layout_height="40dp"
+		android:layout_marginTop="35dp"
+		android:text="Connect"
+		android:layout_below="@+id/status"
+		android:layout_centerHorizontal="true" />
+
+	<ListView
+		android:id="@+id/list"
+		android:layout_width="match_parent"
+		android:layout_height="10dp"
+		android:textColor="@color/primary_light"
+		android:layout_alignParentStart="true"
+		android:layout_above="@+id/btn_send"
+		android:layout_below="@+id/input_layout" />
+
+</RelativeLayout>
+
+
+
+
+

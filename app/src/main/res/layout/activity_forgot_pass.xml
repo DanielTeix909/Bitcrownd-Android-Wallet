@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mainlogo"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/input_register_bg"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_register"
+            android:textColorHint="@color/input_register_hint" />
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/btn_Forgot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/darkorange"
+            android:text="Recovery"
+            android:textColor="@color/white" />
+
+        <!-- Link to Login Screen -->
+
+        <Button
+            android:id="@+id/btnLinkToLoginScreen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:background="@null"
+            android:text="Already Recovered? Try Login Again"
+            android:textAllCaps="false"
+            android:textColor="@color/darkorange"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/primary_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/mainlogo"
+        android:layout_marginBottom="20dip"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/username_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint" />
+
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:hint="Pin Code"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint" />
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/forgot_button"
+            android:layout_width="135dp"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:text="Forgot Password? Recovery Now!"
+            android:textAllCaps="false"
+            android:textColor="@color/darkorange"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/darkorange"
+            android:text="@string/btn_login"
+            android:textColor="@color/bottom_bar_bg" />
+
+        <!-- Link to Login Screen -->
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"
+            android:background="@null"
+            android:text="Create a new account, it´s free!"
+            android:textAllCaps="false"
+            android:textColor="@color/darkorange"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary_dark"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/addressArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:textAppearance="@android:style/TextAppearance.Medium"
+                        android:layout_below="@+id/qrAddress"
+                        android:textColor="@color/text_muted"
+                        android:layout_marginTop="18dp" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:text="My Adress"
+                        android:textAppearance="@android:style/TextAppearance.Large"
+                        android:textColor="@color/text_muted"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="20dp" />
+
+                    <ImageView
+                        android:id="@+id/qrAddress"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/tab_wallet_qr_code_label"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/addressTypeSelector">
+
+        <ListView
+            android:id="@+id/assetBalances"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:headerDividersEnabled="false"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateOnly="true"
+                android:keepScreenOn="true"
+                android:paddingRight="16dp"
+                android:id="@+id/progressBar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:text="@string/tab_wallet_loading_wallet_label"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_muted"
+                android:layout_toEndOf="@+id/progressBar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/errorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:indeterminateOnly="true"
+                android:keepScreenOn="true"
+                android:paddingRight="16dp"
+                android:src="@drawable/ic_dialog_alert_holo_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:textColor="@color/text_muted"
+                android:text="@string/tab_wallet_loading_wallet_error"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ToggleButton
+        android:id="@+id/addressTypeSelector"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_login"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/text_muted"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:textOff="@string/tab_wallet_receive_bitcoins"
+        android:textOn="@string/tab_wallet_receive_assets"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

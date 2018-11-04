@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_login"
+    android:gravity="center"
+    android:padding="8dp"
+      android:textColor="@color/primary_light"
+    android:text="@string/tab_wallet_balance_label"
+    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+  <include layout="@layout/asset_balance_item"/>
+
+  <TextView
+    android:id="@+id/assetsHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_login"
+    android:gravity="center"
+    android:padding="8dp"
+    android:text="@string/tab_wallet_assets_label"
+      android:textColor="@color/primary_light"
+    android:textAppearance="?android:attr/textAppearanceLarge"/>
+</LinearLayout>

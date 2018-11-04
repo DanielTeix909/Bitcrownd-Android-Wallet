@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="apptheme_color">#78cd51</color>
+  <color name="apptheme_color_active">#69B247</color>
+
+  <color name="text_muted">#f4f4f4</color>
+  <color name="light_background">#706b6b</color>
+
+  <color name="positive_transaction">#000000</color>
+  <color name="negative_transaction">#FF0000</color>
+
+</resources>

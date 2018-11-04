@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="bitcrownd.wallet.bitcrownd.transfer.nfc.MainActivity"
+	android:background="@color/primary_dark">
+
+	<TextView
+		android:id="@+id/textView17"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+
+		android:text="Check your Bitcoin Adress"
+		android:textColor="@color/primary_light"
+		android:textSize="18sp"
+		android:layout_below="@+id/status"
+		android:layout_alignStart="@+id/SendText"
+		android:layout_marginTop="27dp" />
+
+	<EditText
+		android:id="@+id/SendText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="13"
+		android:hint="Bitcoin Adress"
+		android:textColor="@color/primary_light"
+		android:inputType="textMultiLine"
+		android:layout_below="@+id/textView17"
+		android:layout_centerHorizontal="true" />
+
+	<Button
+		android:id="@+id/btn_send"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Send Bitcoins"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentEnd="true" />
+
+	<TextView
+		android:id="@+id/status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Device Status"
+		android:textSize="18sp"
+
+		android:textColor="@color/primary_light"
+		android:layout_marginTop="24dp"
+		android:layout_below="@+id/btn_connect"
+		android:layout_centerHorizontal="true" />
+
+	<Button
+		android:id="@+id/btn_connect"
+		android:layout_width="170dp"
+		android:layout_height="40dp"
+		android:text="Connect"
+		android:layout_below="@+id/textView5"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="43dp" />
+
+	<TextView
+		android:id="@+id/ReceiveText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Send Adress"
+		android:textSize="18sp"
+
+		android:textColor="@color/primary_light"
+
+		android:layout_below="@+id/SendText"
+		android:layout_alignStart="@+id/SendText"
+		android:layout_marginTop="39dp" />
+
+</RelativeLayout>
+
+
+

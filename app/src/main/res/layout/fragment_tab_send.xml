@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary_dark"    >
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_login"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Bitcoin Amount"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/primary_light"
+        android:layout_marginBottom="19dp"
+        android:layout_above="@+id/btcexchange"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Scan your QrCode"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/text_muted"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/toAddress"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_muted"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/amount"
+        android:layout_alignEnd="@+id/btcexchange" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="start"
+        android:layout_marginRight="26dp"
+        android:text="Bitcoin Adress"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@color/text_muted"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/qrCodeButton"
+        android:layout_toStartOf="@+id/btcexchange" />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:textColor="@color/text_muted"
+
+        android:layout_above="@+id/sendButton"
+        android:layout_alignStart="@+id/assetSpinner"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btcexchange"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:background="@color/bg_login"
+        android:src="@drawable/ic_action_camera"
+        android:text=" "
+
+        android:layout_alignTop="@+id/amount"
+        android:layout_toEndOf="@+id/amount" />
+
+    <Button
+          android:layout_width="164dp"
+          android:layout_height="164dp"
+          android:layout_marginLeft="8dp"
+          android:background="@color/bg_login"
+          android:src="@drawable/ic_action_camera"
+          android:id="@+id/qrCodeButton"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+          android:id="@+id/assetSpinner"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:layout_weight="0.4"
+          android:layout_below="@+id/sendButton"
+          android:layout_alignParentStart="true"
+          android:layout_marginStart="18dp"
+          android:layout_marginTop="31dp" />
+
+
+    <Button
+      android:id="@+id/sendButton"
+      android:layout_width="100dp"
+      android:layout_height="wrap_content"
+      android:text="@string/tab_send_send_button"
+      android:textAppearance="@android:style/TextAppearance.Large"
+      android:background="@color/bg_login"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_action_camera"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_refresh_white_36dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/btcexchange"
+        android:layout_alignBottom="@+id/btcexchange"
+        android:layout_alignEnd="@+id/btcexchange" />
+
+
+</RelativeLayout>
